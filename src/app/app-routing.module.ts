@@ -8,7 +8,7 @@ import { VisualizationComponent } from './visualization/visualization.component'
 import { WeatherDataComponent } from './weather-data/weather-data.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: 'AirQuality', pathMatch: 'full'},
   {path:'Home', component:HomeComponent},
   {path:'About', component:AboutComponent},
   {path:'AirQuality', component:AirQualityComponent},
