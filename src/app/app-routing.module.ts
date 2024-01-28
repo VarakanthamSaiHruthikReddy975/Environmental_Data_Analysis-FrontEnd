@@ -8,13 +8,13 @@ import { VisualizationComponent } from './visualization/visualization.component'
 import { WeatherDataComponent } from './weather-data/weather-data.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'AirQuality', pathMatch: 'full'},
+  {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path:'Home', component:HomeComponent},
   {path:'About', component:AboutComponent},
   {path:'AirQuality', component:AirQualityComponent},
   {path:'WaterQuality', component:WaterQualityComponent},
   {path:'WeatherData', component:WeatherDataComponent},
-  {path:'Visualization', component:VisualizationComponent}
+  {path:'DashBoard', component:VisualizationComponent}
 ];
 
 @NgModule({
