@@ -9,7 +9,7 @@ import { AirQualityComponent } from './air-quality/air-quality.component';
 import { WaterQualityComponent } from './water-quality/water-quality.component';
 import { WeatherDataComponent } from './weather-data/weather-data.component';
 import { VisualizationComponent } from './visualization/visualization.component';
-
+import { HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     MainComponent,
@@ -22,7 +22,7 @@ import { VisualizationComponent } from './visualization/visualization.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [MainComponent]
