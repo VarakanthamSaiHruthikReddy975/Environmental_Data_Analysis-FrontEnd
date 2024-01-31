@@ -10,7 +10,7 @@ export class WeatherDataService {
   private weatherDataUrl = ''
   constructor(private http:HttpClient) { }
 
-  getWeatherData():Observable<WeatherData[]>{
+  getWeatherData(): Observable<WeatherData[]>{
     return this.http.get<WeatherData[]>(this.weatherDataUrl);
   }
 }
