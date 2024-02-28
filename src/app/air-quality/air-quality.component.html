@@ -1,1 +1,23 @@
-<p>air-quality works!</p>
+<br><br>
+<table class="table table-striped table-dark">
+    <thead>
+        <td>#SNO</td>
+        <td>Location</td>
+        <td>date time</td>
+        <td>pm2_5</td>
+        <td>pm10</td>
+        <td>no2</td>
+        <td>o3</td>
+    </thead>
+    <body>
+        <tr *ngFor="let record of airQuality, let i = index">
+            <td>{{i+1}}</td>
+            <td>{{record.location}}</td>
+            <td>{{record.dateTime}}</td>
+            <td>{{record.pm2_5}}</td>
+            <td>{{record.pm10}}</td>
+            <td>{{record.no2}}</td>
+            <td>{{record.o3}}</td>
+        </tr>
+    </body>
+</table>

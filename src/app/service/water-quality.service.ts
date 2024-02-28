@@ -8,10 +8,10 @@ import { WaterQuality } from '../model/WaterQuality';
 })
 export class WaterQualityService {
 
-  private waterQualityUrl = ''
+  private waterQualityUrl = 'http://localhost:8080/api/waterquality/allRecords'
   constructor(private http:HttpClient) { }
 
-  getWaterQuality():Observable<WaterQuality[]>{
+  getWaterQualityData():Observable<WaterQuality[]>{
     return this.http.get<WaterQuality[]>(this.waterQualityUrl);
   }
 }

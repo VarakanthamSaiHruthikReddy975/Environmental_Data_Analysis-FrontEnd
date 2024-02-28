@@ -7,21 +7,19 @@ import { AirQuality } from '../model/AirQuality';
   templateUrl: './air-quality.component.html',
   styleUrls: ['./air-quality.component.css']
 })
-export class AirQualityComponent implements OnInit{
-  airQuality!: AirQuality[];
-  constructor(private airQualityService:AirQualityService){
+export class AirQualityComponent implements OnInit {
+  airQuality: AirQuality[] = []; // Initialize with an empty array for type safety and easier handling in template
 
-  }
-  ngOnInit()
-  {
-      this.airQualityService.getAirQualityData().subscribe((data:AirQuality[])=>
-      {
+  constructor(private airQualityService: AirQualityService) { }
+
+  ngOnInit(): void {
+    this.airQualityService.getAirQualityData().subscribe({
+      next: (data: AirQuality[]) => {
         this.airQuality = data;
       },
-      error=>{
-        console.error('Error fetching Air Quality Data')
+      error: (error: any) => { // Type the error parameter
+        console.error('Error fetching Air Quality Data:', error);
       }
-      
-      );
+    });
   }
 }

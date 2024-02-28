@@ -6,7 +6,7 @@ import { AirQuality } from '../model/AirQuality';
   providedIn: 'root'
 })
 export class AirQualityService {
-  private apiUrl = '' 
+  private apiUrl = 'http://localhost:8080/api/air-quality/allRecords'; 
   constructor(private http:HttpClient) { }
 
   getAirQualityData():Observable<AirQuality[]>{
