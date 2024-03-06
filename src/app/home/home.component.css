@@ -1,3 +1,17 @@
 .text-custom{
     color:#484f36;
 }
+.action-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+}
+
+.action-buttons a, .action-buttons .dropdown {
+    margin-right: 10px; /* Adjust this value to reduce/increase space between buttons */
+}
+
+/* Remove the last margin for a cleaner look */
+.action-buttons a:last-child, .action-buttons .dropdown:last-child {
+    margin-right: 0;
+}

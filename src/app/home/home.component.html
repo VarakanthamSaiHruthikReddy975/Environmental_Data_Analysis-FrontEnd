@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Enviroment Data Analysis of my website</title>
+    <title>Welcome to Environment Data Analysis of my website</title>
+    <style>
+        /* Additional styles for alignment */
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .action-buttons a, .action-buttons .dropdown {
+            margin-right: 10px; /* Adjust spacing as needed */
+        }
+        
+        /* Remove the last margin for a cleaner look */
+        .action-buttons a:last-child, .action-buttons .dropdown:last-child {
+            margin-right: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="completeHome">
@@ -18,25 +35,27 @@
               <div class="col-md-6">
                 <h1 class="text-custom">Hello, I'm Sai Hruthik Reddy Varakantham</h1>
                 <p class="lead text-secondary">Full Stack Developer (<b>Tech Stack</b> - Java, Spring Boot, Angular, Bootstrap, MySQL)</p>
-                <p class="text-custom">I'm a recent grad from UIC, specializing in Enterprise Software Development. With a passion for developing full stack enterprise apps, I combine skills like Java, Spring Boot, Angular, MySQL to show that visualization can be made possible by using java as backend</p>
-          
+                <p class="text-custom">I'm a recent grad from UIC, specializing in Enterprise Software Development. With a passion for developing full stack enterprise apps, I combine skills like Java, Spring Boot, Angular, MySQL to show that visualization can be made possible by using Java as backend.</p>
+                
                 <!-- Call to Action Buttons -->
-                <a routerLink="/About" class="btn btn-primary me-2">My Portfolio</a>
-        <!-- Button to trigger modal -->
-        <div class="dropdown">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Choose Visualizations
-            </button>
-          
-            <!-- Dropdown Menu -->
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" routerLink="/AirQuality">Air Quality</a>
-              <a class="dropdown-item" routerLink="/WaterQuality">Water Quality</a>
-              <a class="dropdown-item" routerLink="/WeatherData">Weather Data</a>
-              <a class="dropdown-item" routerLink="/Dashboard">Complete Dashboard</a>
-            </div>
-          </div>
-          
+                <div class="action-buttons">
+                    <a routerLink="/About" class="btn btn-primary me-2">My Portfolio</a>
+                    <!-- Button to trigger modal -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Choose Visualizations
+                        </button>
+                      
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" routerLink="/AirQuality">Air Quality</a>
+                          <a class="dropdown-item" routerLink="/WaterQuality">Water Quality</a>
+                          <a class="dropdown-item" routerLink="/WeatherData">Weather Data</a>
+                          <a class="dropdown-item" routerLink="/Dashboard">Complete Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                
                 </div>
             </div>
           </section>
@@ -44,4 +63,3 @@
         </div>
 </body>
 </html>
-
