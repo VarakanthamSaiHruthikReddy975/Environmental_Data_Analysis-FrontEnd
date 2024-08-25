@@ -12,6 +12,7 @@ export class AirQualityComponent implements OnInit {
 
   constructor(private airQualityService: AirQualityService) { }
 
+  //getting all of the air quality records
   ngOnInit(): void {
     this.airQualityService.getAirQualityData().subscribe({
       next: (data: AirQuality[]) => {

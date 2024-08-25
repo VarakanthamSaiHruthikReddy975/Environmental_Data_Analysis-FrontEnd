@@ -13,13 +13,13 @@ export class WeatherDataComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.weatherDataService.getWeatherData.subscribe({
+    this.weatherDataService.getWeatherData().subscribe({
       next: (data: WeatherData[]) => {
         this.weatherData = data;
       }
     ,
     error: (error:any)=>{
-      console.error('error fetching weather data');
+      console.error('Error fetching Weather Data');
     }
   });
   }

@@ -9,6 +9,7 @@ export class AirQualityService {
   private apiUrl = 'http://localhost:8080/api/air-quality/allRecords'; 
   constructor(private http:HttpClient) { }
 
+  //Get all air quality records 
   getAirQualityData():Observable<AirQuality[]>{
     return this.http.get<AirQuality[]>(this.apiUrl);
   }
